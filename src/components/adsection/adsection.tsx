@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid"; // Grid version 1
 import { CustomizedCard } from "../shared/card-styled";
 
-
 import InfoCard from "../infocard/infocard";
 
 function AdSection() {

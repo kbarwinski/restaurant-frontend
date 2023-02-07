@@ -9,6 +9,8 @@ import {
   CustomizedButtonContainer,
   CustomizedLink,
 } from "./navbar-styled";
+import LoginModal from "../loginmodal/loginmodal";
+import RegistrationModal from "../registrationmodal/registrationmodal";
 
 function NavBar() {
   return (
@@ -47,7 +49,10 @@ function NavBar() {
             <CustomizedButton>Kontakt</CustomizedButton>
           </CustomizedLink>
         </CustomizedButtonContainer>
-        <Container maxWidth="md"></Container>
+        <CustomizedButtonContainer maxWidth="md">
+            <LoginModal/>
+            <RegistrationModal/>
+        </CustomizedButtonContainer>
       </CustomizedToolbar>
     </CustomizedAppBar>
   );

@@ -1,27 +1,16 @@
-import { LatLngExpression } from "leaflet";
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-const position: LatLngExpression = [51.505, -0.09];
+import { ContactContainer } from "./contactsection-styled";
+import ContactCard from "../contactcard/contactcard";
+import { AddressInfo, OpenTimeInfo } from "../../constants/contactcardcontents";
+
 
 export default function ContactSection() {
   return (
-    <MapContainer
-      center={position}
-      zoom={13}
-      scrollWheelZoom={false}
-      style={{ height: "30vh" }}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
+      <ContactContainer>
+        <ContactCard title="KONTAKT" contents={AddressInfo} />
+        <ContactCard title="GODZINY OTWARCIA" contents={OpenTimeInfo} />
+      </ContactContainer>
   );
 }

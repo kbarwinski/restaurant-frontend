@@ -1,6 +1,4 @@
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import { Button, CardContent } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid"; // Grid version 1
@@ -54,6 +52,7 @@ function AdSection() {
         <Grid sx={{ display: { xs: "none", md: "block" } }} md={5}>
           <img
             src="https://i.imgur.com/XVOkpZn.jpg"
+            alt=""
             style={{
               width: "100%",
               height: "100%",

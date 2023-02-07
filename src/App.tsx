@@ -1,24 +1,29 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/navbar/navbar";
 import HomePage from "./pages/home/home";
+import ContactPage from "./pages/contact/contact";
+import AboutPage from "./pages/about/about";
+import MenuPage from "./pages/menu/menu";
+import ReservationsPage from "./pages/reservations/reservations";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import ContactSection from "./components/contactsection/contactsection";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/menu" element={<HomePage />}/>
-          <Route path="/reservations" element={<HomePage />}/>
-          <Route path="/about" element={<HomePage />}/>
-          <Route path="/contact" element={<HomePage />}/>
+          <Route path="/menu" element={<MenuPage />}/>
+          <Route path="/reservations" element={<ReservationsPage />}/>
+          <Route path="/about" element={<AboutPage />}/>
+          <Route path="/contact" element={<ContactPage />}/>
         </Routes>
       </Router>
+      <ContactSection/>
     </div>
   );
 }

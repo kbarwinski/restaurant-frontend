@@ -1,8 +1,10 @@
-import { Card } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import styled from "styled-components";
 
-export const CustomizedCard = styled(Card)`
-  box-shadow: 0 0 0 0;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
+export const ContactContainer = styled.div`
+  padding:3vh 0vh 0vh 0vh;
+  display: flex;
+  background-color: #111;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content:space-evenly;
 `;

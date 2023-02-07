@@ -1,17 +1,15 @@
-import{
-    HomePageContainer,
-} from './home-styled';
+import { PageContainerNoPadding } from '../../components/shared/page-container-styled';
 import CustomCarousel from '../../components/carousel/carousel';
 import AdSection from '../../components/adsection/adsection';
-import ContactSection from '../../components/contactsection/contactsection';
+import Map from '../../components/map/map';
  
 function HomePage(){
     return(
-        <HomePageContainer>
+        <PageContainerNoPadding>
             <CustomCarousel/>
             <AdSection/>
-            <ContactSection/>
-        </HomePageContainer>
+            <Map/>
+        </PageContainerNoPadding>
     );
 }
 

@@ -9,6 +9,7 @@ import { styled } from '@mui/material/styles';
 
 
 export const CustomizedAppBar = styled(AppBar)`
+  height:8vh;
   user-select: none;
   background-image: linear-gradient(0, rgba(0,0,0,0), rgba(0,0,0,0.8));
   background-color: rgba(0,0,0,0.0);
@@ -23,7 +24,7 @@ export const CustomizedToolbar = styled(Toolbar)`
 
 export const CustomizedButtonContainer = styled(Container)`
 display:flex;
-justify-content:space-around;
+justify-content:center;
 `;
 
 export const CustomizedButton = styled(Button)`

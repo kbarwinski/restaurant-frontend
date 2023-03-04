@@ -10,15 +10,27 @@ export const H5Base = styled(Typography)`
   margin-bottom: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: #ccc;
+  background-color: #ddd;
+`;
+
+export const H3Title = styled(Typography)`
+  width:100%;
+  background-color:#111;
+  color:white;
+  place-self:center;
+  align-self:center;
+  text-align:center;
+  margin: 8px 16px 16px 16px;
 `;
 
 export const H5Left = styled(H5Base)`
   align-self: flex-start;
   text-align: right;
+  box-shadow: 20px -20px 14px #111;
 `;
 
 export const H5Right = styled(H5Base)`
   align-self: flex-end;
   text-align: left;
+  box-shadow: -20px -20px 14px #111;
 `;

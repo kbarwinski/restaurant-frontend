@@ -14,7 +14,9 @@ export interface PaginationArgs{
 
 export const ProductApi = {
     getProducts: async function(args:PaginationArgs){
-        const result = await axios.get(baseUrl);
+        const result = await axios.get(baseUrl,{
+            params:args,
+        });
         return result;
     },
 }

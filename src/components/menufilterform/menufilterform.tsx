@@ -1,10 +1,10 @@
-import { FormContainer } from "./menufilterform-styled";
-import TextField from "@mui/material/TextField/TextField";
-import Button from "@mui/material/Button/Button";
-import { H3Title } from "../shared/typography-styled";
-import { InputLabel, MenuItem, Select } from "@mui/material";
-import { useState } from "react";
-import { PaginationArgs } from "../../api/product";
+import { FormContainer } from './menufilterform-styled';
+import TextField from '@mui/material/TextField/TextField';
+import Button from '@mui/material/Button/Button';
+import { H3Title } from '../shared/typography-styled';
+import { InputLabel, MenuItem, Select } from '@mui/material';
+import { useState } from 'react';
+import { PaginationArgs } from '../../api/product';
 
 export interface FilterProps {
   pagination: PaginationArgs;
@@ -87,20 +87,20 @@ function MenuFilterForm(props: FilterProps) {
           setSortOrder(event.target.value);
         }}
       >
-        <MenuItem value={"price, asc"}>Cena rosnąco</MenuItem>
-        <MenuItem value={"price, desc"}>Cena malejąco</MenuItem>
-        <MenuItem value={"name, asc"}>Nazwa rosnąco</MenuItem>
-        <MenuItem value={"name, desc"}>Nazwa malejąco</MenuItem>
+        <MenuItem value={'price, asc'}>Cena rosnąco</MenuItem>
+        <MenuItem value={'price, desc'}>Cena malejąco</MenuItem>
+        <MenuItem value={'name, asc'}>Nazwa rosnąco</MenuItem>
+        <MenuItem value={'name, desc'}>Nazwa malejąco</MenuItem>
       </Select>
       <Button
         variant="contained"
         size="large"
         sx={{
-          fontFamily: "monospace",
+          fontFamily: 'monospace',
           fontWeight: 900,
-          letterSpacing: ".3rem",
-          color: "white",
-          textDecoration: "none",
+          letterSpacing: '.3rem',
+          color: 'white',
+          textDecoration: 'none',
         }}
         onClick={updatePagination}
       >

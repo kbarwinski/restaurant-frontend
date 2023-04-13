@@ -1,7 +1,7 @@
-import { FormContainer } from "./loginform-styled";
-import TextField from "@mui/material/TextField/TextField";
-import Button from "@mui/material/Button/Button";
-import { H3Title } from "../shared/typography-styled";
+import { FormContainer } from './loginform-styled';
+import TextField from '@mui/material/TextField/TextField';
+import Button from '@mui/material/Button/Button';
+import { H3Title } from '../shared/typography-styled';
 
 function LoginForm() {
   return (
@@ -18,11 +18,11 @@ function LoginForm() {
         variant="contained"
         size="large"
         sx={{
-          fontFamily: "monospace",
+          fontFamily: 'monospace',
           fontWeight: 900,
-          letterSpacing: ".3rem",
-          color: "white",
-          textDecoration: "none",
+          letterSpacing: '.3rem',
+          color: 'white',
+          textDecoration: 'none',
         }}
       >
         Zaloguj się

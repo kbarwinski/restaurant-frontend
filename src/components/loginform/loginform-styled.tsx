@@ -12,4 +12,5 @@ export const FormContainer = styled.div`
   align-items:center;
   min-height:40%;
   min-width:15%;
+  
 `;

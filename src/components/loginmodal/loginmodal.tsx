@@ -3,7 +3,6 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import LoginForm from '../loginform/loginform';
 
-
 export default function LoginModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -18,7 +17,7 @@ export default function LoginModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-          <LoginForm/>
+        <LoginForm />
       </Modal>
     </div>
   );

@@ -1,9 +1,7 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
-import RegistrationForm from '../registrationform/registrationform';
-
-
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import RegistrationForm from "../registrationform/registrationform";
 
 export default function RegistrationModal() {
   const [open, setOpen] = React.useState(false);
@@ -19,7 +17,7 @@ export default function RegistrationModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <RegistrationForm/>
+        <RegistrationForm />
       </Modal>
     </div>
   );

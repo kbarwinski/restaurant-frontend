@@ -1,6 +1,6 @@
-import { CardContent } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import { CustomizedCard } from "../shared/card-styled";
+import { CardContent } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import { CustomizedCard } from '../shared/card-styled';
 
 export interface CardProps {
   title: string;

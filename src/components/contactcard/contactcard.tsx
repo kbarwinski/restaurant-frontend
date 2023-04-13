@@ -1,7 +1,7 @@
-import { CardContent } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import { CustomizedCard } from "../shared/card-styled";
-import { ContactCardContent } from "../../constants/contactcardcontents";
+import { CardContent } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import { CustomizedCard } from '../shared/card-styled';
+import { ContactCardContent } from '../../constants/contactcardcontents';
 
 export interface CardProps {
   title: string;
@@ -13,7 +13,7 @@ function ContactCard(props: CardProps) {
     <CustomizedCard>
       <CardContent>
         <Typography variant="h4" component="div">
-        {props.title}
+          {props.title}
         </Typography>
         {props.contents.map((x) => {
           return (

@@ -1,6 +1,6 @@
-import { CardContent, CardMedia } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import { CustomizedCard } from "../shared/card-styled";
+import { CardContent, CardMedia } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import { CustomizedCard } from '../shared/card-styled';
 
 export interface MenuCardProps {
   name: string;
@@ -12,21 +12,19 @@ export interface MenuCardProps {
 function MenuCard(props: MenuCardProps) {
   return (
     <CustomizedCard>
-        <CardMedia
+      <CardMedia
         component="img"
         image={props.imageUrl}
         title={props.name}
         style={{
-          height:'15vh'
+          height: '15vh',
         }}
-        />
+      />
       <CardContent>
-      <Typography variant="h5" component="div">
+        <Typography variant="h5" component="div">
           {props.name}
-      </Typography>
-        <Typography variant="body2">
-          {props.description}
         </Typography>
+        <Typography variant="body2">{props.description}</Typography>
       </CardContent>
     </CustomizedCard>
   );

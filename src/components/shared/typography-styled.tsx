@@ -1,5 +1,5 @@
-import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 export const H5Base = styled(Typography)`
   max-width: 65%;
@@ -14,12 +14,12 @@ export const H5Base = styled(Typography)`
 `;
 
 export const H3Title = styled(Typography)`
-  width:100%;
-  background-color:#111;
-  color:white;
-  place-self:center;
-  align-self:center;
-  text-align:center;
+  width: 100%;
+  color: white;
+  place-self: center;
+  background-color: #111;
+  align-self: center;
+  text-align: center;
   margin: 8px 16px 16px 16px;
 `;
 

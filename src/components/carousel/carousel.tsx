@@ -13,7 +13,7 @@ import { Button, Typography } from "@mui/material";
 function CustomCarousel() {
   return (
     <CarouselContainer>
-        <DarkOverlay/>
+      <DarkOverlay />
       <Carousel
         transitionTime={2000}
         interval={5000}
@@ -31,12 +31,12 @@ function CustomCarousel() {
         <ImageContainer src="https://i.imgur.com/SBwhZzZ.jpg" />
       </Carousel>
       <WelcomeTextContainer>
-      <Typography
+        <Typography
           variant="h5"
           noWrap
           sx={{
-            mt:1,
-            mb:1,
+            mt: 1,
+            mb: 1,
             fontFamily: "monospace",
             fontWeight: 700,
             letterSpacing: ".3rem",
@@ -50,8 +50,8 @@ function CustomCarousel() {
           variant="h4"
           noWrap
           sx={{
-            mt:1,
-            mb:3,
+            mt: 1,
+            mb: 3,
             fontFamily: "monospace",
             fontWeight: 600,
             letterSpacing: ".1rem",
@@ -61,19 +61,20 @@ function CustomCarousel() {
         >
           ODKRYJ DOSKONAŁE JEDZENIE I ŚWIETNĄ ZABAWĘ BLISKO CIEBIE
         </Typography>
-        <Button 
-        variant="contained"
-        size="large"
-        sx={{
-            width:"50%",
-            alignSelf:"center",
+        <Button
+          variant="contained"
+          size="large"
+          sx={{
+            width: "50%",
+            alignSelf: "center",
             fontFamily: "monospace",
             fontWeight: 900,
             letterSpacing: ".3rem",
             color: "white",
             textDecoration: "none",
-        }}
-        >MENU / ZAMOW ONLINE
+          }}
+        >
+          MENU / ZAMOW ONLINE
         </Button>
       </WelcomeTextContainer>
     </CarouselContainer>

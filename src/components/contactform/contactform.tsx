@@ -1,6 +1,6 @@
-import { FormContainer, SpaceA, SpaceB, SpaceC } from "./contactform-styled";
-import TextField from "@mui/material/TextField/TextField";
-import Button from "@mui/material/Button/Button";
+import { FormContainer, SpaceA, SpaceB, SpaceC } from './contactform-styled';
+import TextField from '@mui/material/TextField/TextField';
+import Button from '@mui/material/Button/Button';
 function ContactForm() {
   return (
     <FormContainer>
@@ -30,11 +30,11 @@ function ContactForm() {
           variant="contained"
           size="large"
           sx={{
-            fontFamily: "monospace",
+            fontFamily: 'monospace',
             fontWeight: 900,
-            letterSpacing: ".3rem",
-            color: "white",
-            textDecoration: "none",
+            letterSpacing: '.3rem',
+            color: 'white',
+            textDecoration: 'none',
           }}
         >
           Wyslij wiadomosc

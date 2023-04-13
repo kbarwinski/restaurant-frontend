@@ -1,19 +1,19 @@
-import { Grid } from "@mui/material";
-import { useEffect, useState } from "react";
-import { PaginationArgs, ProductApi } from "../../api/product";
-import MenuFilterForm from "../../components/menufilterform/menufilterform";
-import MenuGrid from "../../components/menugrid/menugrid";
-import { PageContainer } from "../../components/shared/page-container-styled";
+import { Grid } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { PaginationArgs, ProductApi } from '../../api/product';
+import MenuFilterForm from '../../components/menufilterform/menufilterform';
+import MenuGrid from '../../components/menugrid/menugrid';
+import { PageContainer } from '../../components/shared/page-container-styled';
 
 function MenuPage() {
   const [data, setData] = useState([]);
   const [pagination, setPagination] = useState<PaginationArgs>({
     maxPrice: 1000,
     minPrice: 0,
-    name: "",
+    name: '',
     page: 0,
     size: 10,
-    sort: "name, desc",
+    sort: 'name, desc',
   });
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function MenuPage() {
       })
       .catch(console.error);
 
-      console.log(pagination);
+    console.log(pagination);
   }, [pagination]);
   return (
     <PageContainer>

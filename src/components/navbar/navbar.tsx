@@ -1,6 +1,6 @@
-import * as React from "react";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import * as React from 'react';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 import {
   CustomizedAppBar,
@@ -8,9 +8,9 @@ import {
   CustomizedButton,
   CustomizedButtonContainer,
   CustomizedLink,
-} from "./navbar-styled";
-import LoginModal from "../loginmodal/loginmodal";
-import RegistrationModal from "../registrationmodal/registrationmodal";
+} from './navbar-styled';
+import LoginModal from '../loginmodal/loginmodal';
+import RegistrationModal from '../registrationmodal/registrationmodal';
 
 function NavBar() {
   return (
@@ -23,12 +23,12 @@ function NavBar() {
               noWrap
               sx={{
                 mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
                 fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "white",
-                textDecoration: "none",
+                letterSpacing: '.3rem',
+                color: 'white',
+                textDecoration: 'none',
               }}
             >
               Restauracja Testowa
@@ -50,8 +50,8 @@ function NavBar() {
           </CustomizedLink>
         </CustomizedButtonContainer>
         <CustomizedButtonContainer maxWidth="md">
-            <LoginModal/>
-            <RegistrationModal/>
+          <LoginModal />
+          <RegistrationModal />
         </CustomizedButtonContainer>
       </CustomizedToolbar>
     </CustomizedAppBar>

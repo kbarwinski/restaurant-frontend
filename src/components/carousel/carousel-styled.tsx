@@ -5,7 +5,7 @@ export const ImageContainer = styled.img`
   max-height: 100vh;
   width: 100vw;
   object-fit: cover;
-  z-index:-1;
+  z-index: -1;
 `;
 
 export const CarouselContainer = styled.div`
@@ -17,17 +17,17 @@ export const CarouselContainer = styled.div`
 `;
 
 export const DarkOverlay = styled.div`
-    width:100%;
-    height:100%;
-    z-index:1;
-    position:absolute;
-    background-color:rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
 `;
 
 export const WelcomeTextContainer = styled.div`
-  user-select:all;
+  user-select: all;
   pointer-events: all;
-  z-index:2;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   position: absolute;

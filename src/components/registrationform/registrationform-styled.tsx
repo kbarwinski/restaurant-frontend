@@ -6,10 +6,10 @@ export const FormContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display:flex;
-  flex-direction:column;
-  justify-content:space-evenly;
-  align-items:center;
-  min-height:60%;
-  min-width:20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 60%;
+  min-width: 20%;
 `;

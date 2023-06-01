@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import TextField from "@mui/material/TextField/TextField";
+import { FormContainer, StyledTextField } from "../shared/form-styled";
 import Button from "@mui/material/Button/Button";
 
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
@@ -8,7 +8,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { Moment } from "moment";
 
-import { FormContainer } from "./reservationform-styled";
 import moment from "moment";
 import { H3Title } from "../shared/typography-styled";
 
@@ -41,18 +40,18 @@ moment(start).add(remainder, "minutes"),
           minutesStep={15}
           maxDateTime={moment(value).add(1,"year")}
           onChange={handleChange}
-          renderInput={(params) => <TextField {...params} />}
+          renderInput={(params) => <StyledTextField {...params} />}
         />
 
-        <TextField
+        <StyledTextField
           id="outlined-basic"
           label="Imie i nazwisko*"
           variant="outlined"
         />
-        <TextField id="outlined-basic" label="Email*" variant="outlined" />
-        <TextField id="outlined-basic" label="Telefon*" variant="outlined" />
+        <StyledTextField id="outlined-basic" label="Email*" variant="outlined" />
+        <StyledTextField id="outlined-basic" label="Telefon*" variant="outlined" />
 
-        <TextField
+        <StyledTextField
           id="outlined-basic"
           label="Uwagi"
           variant="outlined"

@@ -1,5 +1,5 @@
 import { PageContainer } from "../../components/shared/page-container-styled";
-import ContactForm from "../../components/contactform/contactform";
+import ContactForm from "../../components/contact/contactform/contactform";
 import Map from "../../components/map/map";
 import { H3Title } from "../../components/shared/typography-styled";
 

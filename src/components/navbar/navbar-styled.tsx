@@ -17,6 +17,7 @@ export const CustomizedAppBar = styled(AppBar)`
     /* ${(props:any) => props.theme.breakpoints.up("sm")} {
       background-color: rgba(0,0,0,0.0);
   } */
+  
 `;
 
 export const CustomizedToolbar = styled(Toolbar)`
@@ -30,6 +31,9 @@ justify-content:center;
 export const CustomizedButton = styled(Button)`
 width:auto;
 color:white;
+:hover{
+  color:blue;
+}
 `;
 
 export const CustomizedLink = styled(Link)`

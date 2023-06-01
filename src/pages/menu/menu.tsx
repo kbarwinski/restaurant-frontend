@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import { PaginationArgs, ProductApi } from "../../api/product";
-import MenuFilterForm from "../../components/menufilterform/menufilterform";
-import MenuGrid from "../../components/menugrid/menugrid";
+import MenuFilterForm from "../../components/menu/menufilterform/menufilterform";
+import MenuGrid from "../../components/menu/menugrid/menugrid";
 import { PageContainer } from "../../components/shared/page-container-styled";
 
 function MenuPage() {
@@ -21,24 +21,36 @@ function MenuPage() {
       return await ProductApi.getProducts(pagination);
     };
     getProducts()
-      .then((x) => {
+      .then((x) => {  
         setData(x.data);
+        console.log(x.data);
       })
       .catch(console.error);
 
       console.log(pagination);
   }, [pagination]);
+
+  //Style Mui Grid Components for responsive filter form
   return (
-    <PageContainer>
+    <PageContainer> 
       <Grid container spacing={2}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        >
           <MenuFilterForm
             pagination={pagination}
             setPagination={setPagination}
           />
         </Grid>
-        <Grid item xs={12} md={8}>
-          <MenuGrid items={data} />
+        <Grid item xs={12} md={8} sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+          <MenuGrid items={data}/>
         </Grid>
       </Grid>
     </PageContainer>

@@ -10,10 +10,10 @@ function MenuPage() {
   const [pagination, setPagination] = useState<PaginationArgs>({
     maxPrice: 1000,
     minPrice: 0,
-    name: "",
+    name: '',
     page: 0,
     size: 10,
-    sort: "name, desc",
+    sort: 'name, desc',
   });
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function MenuPage() {
       })
       .catch(console.error);
 
-      console.log(pagination);
+    console.log(pagination);
   }, [pagination]);
 
   //Style Mui Grid Components for responsive filter form

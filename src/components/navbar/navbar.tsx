@@ -49,12 +49,12 @@ function NavBar() {
               noWrap
               sx={{
                 mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
                 fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "white",
-                textDecoration: "none",
+                letterSpacing: '.3rem',
+                color: 'white',
+                textDecoration: 'none',
               }}
             >
               Restauracja Testowa

@@ -7,9 +7,9 @@ import { AddressInfo, OpenTimeInfo } from "../../../constants/contactcardcontent
 
 export default function ContactSection() {
   return (
-      <ContactContainer>
-        <ContactCard title="KONTAKT" contents={AddressInfo} />
-        <ContactCard title="GODZINY OTWARCIA" contents={OpenTimeInfo} />
-      </ContactContainer>
+    <ContactContainer>
+      <ContactCard title="KONTAKT" contents={AddressInfo} />
+      <ContactCard title="GODZINY OTWARCIA" contents={OpenTimeInfo} />
+    </ContactContainer>
   );
 }

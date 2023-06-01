@@ -86,20 +86,20 @@ function MenuFilterForm(props: FilterProps) {
           setSortOrder(event.target.value);
         }}
       >
-        <MenuItem value={"price, asc"}>Cena rosnąco</MenuItem>
-        <MenuItem value={"price, desc"}>Cena malejąco</MenuItem>
-        <MenuItem value={"name, asc"}>Nazwa rosnąco</MenuItem>
-        <MenuItem value={"name, desc"}>Nazwa malejąco</MenuItem>
+        <MenuItem value={'price, asc'}>Cena rosnąco</MenuItem>
+        <MenuItem value={'price, desc'}>Cena malejąco</MenuItem>
+        <MenuItem value={'name, asc'}>Nazwa rosnąco</MenuItem>
+        <MenuItem value={'name, desc'}>Nazwa malejąco</MenuItem>
       </Select>
       <Button
         variant="contained"
         size="large"
         sx={{
-          fontFamily: "monospace",
+          fontFamily: 'monospace',
           fontWeight: 900,
-          letterSpacing: ".3rem",
-          color: "white",
-          textDecoration: "none",
+          letterSpacing: '.3rem',
+          color: 'white',
+          textDecoration: 'none',
         }}
         onClick={updatePagination}
       >

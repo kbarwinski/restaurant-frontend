@@ -1,5 +1,5 @@
-import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 export const HBase = styled(Typography)`
   font-family: "consolas", "courier new", monospace;

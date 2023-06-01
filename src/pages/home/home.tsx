@@ -2,6 +2,7 @@ import { PageContainerNoPadding } from '../../components/shared/page-container-s
 import CustomCarousel from '../../components/home/carousel/carousel';
 import AdSection from '../../components/home/adsection/adsection';
 import Map from '../../components/map/map';
+import ContactSection from '../../components/contact/contactsection/contactsection';
 
 function HomePage() {
   return (
@@ -9,6 +10,7 @@ function HomePage() {
       <CustomCarousel />
       <AdSection />
       <Map />
+      <ContactSection />
     </PageContainerNoPadding>
   );
 }

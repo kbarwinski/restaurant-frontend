@@ -37,14 +37,13 @@ function MenuCard(props: MenuCardInterface) {
         }}
       ></CardMedia>
       <CartOverlay>
-        <PriceText>${props.item.price}</PriceText>
+        <PriceText>{props.item.price} zł</PriceText>
         <IconButton onClick={()=>props.actions.addAction(props.item)}>
           <AddShoppingCart />
         </IconButton>
-        {props.quantity > 0 && 
-        <IconButton onClick={()=>props.actions.removeAction(props.item)}>
+        <IconButton disabled={props.quantity<=0} onClick={()=>props.actions.removeAction(props.item)}>
           <RemoveShoppingCart />
-        </IconButton>}
+        </IconButton>
       </CartOverlay>
       <CardContent>
         <Typography variant="h5" component="div">

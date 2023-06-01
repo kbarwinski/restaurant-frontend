@@ -1,28 +1,22 @@
 import styled from "styled-components";
-import { sizes } from "../../constants/media-query-sizes";
+import { Box, Container, CssBaseline, Paper } from "@mui/material";
 
-export const PageContainerFlexible = styled.div`
-  background-color: #222;
-  padding-top: 8vh;
-  display: flex;
-  flex-direction: column;
-  @media (${sizes.laptop}) {
-    flex-direction: row;
-  }
-`;
-
-export const PageContainer = styled.div`
-  background-color: #222;
+export const PageContainerFlexible = styled(Box)`
   padding-top: 8vh;
   display: flex;
   flex-direction: column;
 `;
 
-export const PageContainerNoPadding = styled.div`
-  background-color: #222;
+export const PageContainer = styled(Box)`
+  padding-top: 8vh;
+  display: flex;
+  flex-direction: column;
 `;
 
-export const CenteringContainer = styled.div`
+export const PageContainerNoPadding = styled(Box)`
+`;
+
+export const CenteringContainer = styled(Box)`
   height: 100%;
   width: 100%;
   display: flex;

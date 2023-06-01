@@ -1,3 +1,4 @@
+import { Box, Paper } from '@mui/material';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -10,14 +11,13 @@ const rotate = keyframes`
   100% {transform: translate(-50%, 0%) rotateZ(360deg);}
 `;
 
-export const StyledBody = styled.div`
+export const StyledBody = styled(Paper)`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   //min-height: 100vh;
-  background-color: #1f1f1f1f;
   font-family: Roboto;
   overflow: hidden;
 
@@ -28,7 +28,6 @@ export const StyledBody = styled.div`
     left: 50%;
     min-width: 300vw;
     //min-height: 300vw;
-    background-color: #000;
     animation-name: ${rotate};
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -48,30 +47,19 @@ export const StyledBody = styled.div`
   }
 `;
 
-export const StyledH1 = styled.h1`
-  color: #3e606f;
+export const StyledH1 = styled(Box)`
   z-index: 10;
   margin: 0;
   font-weight: 300;
   line-height: 1.3;
   text-align: center;
-  font-size: 36px;
 
-  @media (min-width: 480px) {
-    font-size: 11.5vw;
-  }
 `;
 
-export const StyledH2 = styled.h2`
-  color: #3e606f;
+export const StyledH2 = styled(Box)`
   z-index: 10;
   margin: 0;
   font-weight: 300;
   line-height: 1.3;
   text-align: center;
-  font-size: 14px;
-
-  @media (min-width: 480px) {
-    font-size: 3vw;
-  }
 `;

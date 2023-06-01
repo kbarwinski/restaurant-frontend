@@ -3,7 +3,6 @@ import { TextField } from "@mui/material";
 
 //Style CSS for simple black container
 export const FormContainer = styled.div`
-  background-color: #ccc;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -15,7 +14,4 @@ export const FormContainer = styled.div`
 
 export const CustomTextField = styled(TextField)`
   width: 100%;
-  &:hover{  
-    background-color: #ccc;
-  }
 `;

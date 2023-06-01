@@ -2,7 +2,6 @@ import styled from "styled-components";
 import TextField from "@mui/material/TextField/TextField";
 
 export const FormContainer = styled.div`
-  background-color: #ccc;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -19,6 +18,5 @@ export const FormContainer = styled.div`
 export const StyledTextField = styled(TextField)`
   width: 100%;
   &:hover{
-    background-color: #ccc;
   }
 `;

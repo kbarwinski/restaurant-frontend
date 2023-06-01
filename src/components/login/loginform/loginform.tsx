@@ -1,7 +1,6 @@
 import { ModalFormContainer, StyledTextField } from "../../shared/form-styled";
 import Button from "@mui/material/Button/Button";
 import { H3Title } from "../../shared/typography-styled";
-import { Handler } from "leaflet";
 import { useRef } from "react";
 import { AuthApi } from "../../../api/auth";
 import { useAppDispatch } from "../../../store/hooks";
@@ -47,7 +46,6 @@ function LoginForm(props:{closeModal:any}) {
           fontFamily: "monospace",
           fontWeight: 900,
           letterSpacing: ".3rem",
-          color: "white",
           textDecoration: "none",
         }}
         onClick={() => {handleLogin()}}

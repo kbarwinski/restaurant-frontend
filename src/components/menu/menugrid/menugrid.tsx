@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import MenuCard, { MenuCardProps } from "../menucard/menucard";
 
 import { useAppSelector, useAppDispatch } from '../../../store/hooks'
@@ -24,7 +24,8 @@ function MenuGrid(props : MenuGridProps){
     }
 
     return(
-        <Grid container spacing={2}>
+        <Container maxWidth="lg">
+        <Grid container spacing={3} justifyContent="center">
             {props.items.map(x=>{
                 return(
                     <Grid item xs={6} md={4}>
@@ -40,6 +41,8 @@ function MenuGrid(props : MenuGridProps){
                 )
             })}
         </Grid>
+            </Container>
+
     )
 }
 

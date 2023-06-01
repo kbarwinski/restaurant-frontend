@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-  background-color: #ccc;
   position: absolute;
   top: 50%;
   left: 50%;

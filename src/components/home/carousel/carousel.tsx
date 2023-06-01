@@ -50,7 +50,6 @@ function CustomCarousel() {
             fontFamily: "monospace",
             fontWeight: 700,
             letterSpacing: ".3rem",
-            color: "white",
             textDecoration: "none",
           }}
         >
@@ -65,7 +64,6 @@ function CustomCarousel() {
             fontFamily: "monospace",
             fontWeight: 600,
             letterSpacing: ".1rem",
-            color: "white",
             textDecoration: "none",
           }}
         >
@@ -80,7 +78,6 @@ function CustomCarousel() {
             fontFamily: "monospace",
             fontWeight: 900,
             letterSpacing: ".3rem",
-            color: "white",
             textDecoration: "none",
         }}
         onClick={getUsers}

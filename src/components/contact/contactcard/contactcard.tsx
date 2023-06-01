@@ -11,16 +11,21 @@ export interface CardProps {
 function ContactCard(props: CardProps) {
   return (
     <CustomizedCard>
-      <CardContent>
+      <CardContent sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+      }}>
         <H3Title>
         {props.title}
         </H3Title>
         {props.contents.map((x) => {
           return (
-            <div>
+            <>
               <H5Packed>{x.label}</H5Packed>
               <H5Packed>{x.info}</H5Packed>
-            </div>
+            </>
           );
         })}
       </CardContent>

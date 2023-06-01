@@ -59,10 +59,8 @@ function RegistrationForm(props:{closeModal:any}) {
         variant="contained"
         size="large"
         sx={{
-          fontFamily: "monospace",
           fontWeight: 900,
           letterSpacing: ".3rem",
-          color: "white",
           textDecoration: "none",
         }}
         onClick={handleRegistration}

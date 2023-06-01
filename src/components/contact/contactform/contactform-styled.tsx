@@ -13,7 +13,6 @@ export const FormContainer = styled.div`
   grid-gap: 20px;
   padding: 16px 16px 16px 16px;
   margin: 40px 0 40px 0;
-  background-color: #ccc;
   box-shadow: 16px 16px 20px #111;
 `;
 

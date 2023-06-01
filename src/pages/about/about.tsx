@@ -1,3 +1,4 @@
+import ContactSection from '../../components/contact/contactsection/contactsection';
 import {
   CenteringContainer,
   PageContainer,
@@ -44,6 +45,7 @@ function AboutPage() {
         </H5Left>
         <H5Right variant="h6">Zobacz co mamy dla Ciebie w naszym MENU.</H5Right>
       </CenteringContainer>
+      <ContactSection />
     </PageContainer>
   );
 }

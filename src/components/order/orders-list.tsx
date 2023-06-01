@@ -1,109 +1,142 @@
-import React from "react";
-import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Avatar from "@mui/material/Avatar";
-import Divider from "@mui/material/Divider";
+import {
+  DataGrid,
+  GridColDef,
+  GridRowsProp,
+  GridValueGetterParams,
+} from "@mui/x-data-grid";
+import { useEffect, useState } from "react";
+import { OrderApi, PaginationArgs } from "../../api/order";
 import { orderStatus } from "../../constants/enumTranslations";
+import { Button, Menu, MenuItem } from "@mui/material";
 
-const OrderList = ({ orders }: any) => {
-  return (
-    <List>
-      {orders.map((order: any, index: number) => orderItem(order, index))}
-    </List>
-  );
 
-  function orderItem(order: any, index: number) {
+
+export default function DataTable() {
+  const [data, setData] = useState<GridRowsProp>([]);
+  const [refresh, setRefresh] = useState<boolean>(false);
+
+  const [pagination, setPagination] = useState<PaginationArgs>({
+    page: 0,
+    size: 10,
+    sort: "orderDate,DESC",
+  });
+
+  const ChangeStatusButton = ({ orderId }: { orderId: string }) => {
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+    };
+  
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+  
+    const handleStatusChange = async (status: string) => {
+      const res = await OrderApi.changeOrderStatus(status,orderId);
+      res && setRefresh(!refresh);
+      handleClose();
+    };
+  
     return (
-      <React.Fragment key={order.id}>
-        <ListItem alignItems="flex-start">
-          <Avatar
-            alt={order.user.contact.name}
-            src={order.orderItems[0].product.imageUrl}
-          />
-          <ListItemText
-            primary={`Order ID: ${order.id}`}
-            secondary={
-              <>
-                <Typography
-                  component="span"
-                  variant="body2"
-                  color="text.primary"
-                >
-                  Klient: {order.user.contact.name} {order.user.contact.surname}
-                  , {order.user.email}, {order.user.contact.phoneNumber}
-                </Typography>
-                <br />
-                <Typography
-                  component="span"
-                  variant="body2"
-                  color="text.primary"
-                >
-                  Adres: {order.address.streetName}{" "}
-                  {order.address.streetNumber}/{order.address.aptNumber},{" "}
-                  {order.address.cityName}
-                </Typography>
-                <br />
-                <Typography
-                  component="span"
-                  variant="body2"
-                  color="text.primary"
-                >
-                  Status:{" "}
-                  {orderStatus[order.status as keyof typeof orderStatus]}
-                </Typography>
-                <br />
-                <Typography
-                  component="span"
-                  variant="body2"
-                  color="text.primary"
-                >
-                  Utworzono: {order.orderDate}
-                </Typography>
-                <br />
-                {order.completionDate !== null && (
-                  <>
-                    <Typography
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Zakończono: {order.completionDate}
-                    </Typography>
-                    <br />
-                  </>
-                )}
-                {order.orderItems.map((orderItem: any, index: number) => (
-                  <React.Fragment key={orderItem.id}>
-                    <Typography
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      {orderItem.product.name} x {orderItem.quantity}
-                    </Typography>
-                    <br />
-                  </React.Fragment>
-                ))}
-                <Typography
-                  component="span"
-                  variant="body2"
-                  color="text.primary"
-                >
-                  Kwota zamówienia: {order.totalPrice.toFixed(2)} PLN
-                </Typography>
-                <br />
-              </>
-            }
-          />
-        </ListItem>
-        {index !== orders.length - 1 && (
-          <Divider variant="inset" component="li" />
-        )}
-      </React.Fragment>
+      <div>
+        <Button variant="outlined" color="primary" onClick={handleClick}>
+          Change Status
+        </Button>
+        <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
+          
+        <MenuItem onClick={() => handleStatusChange("PENDING")}>{orderStatus.PENDING}</MenuItem>
+        <MenuItem onClick={() => handleStatusChange("IN_PROGRESS")}>{orderStatus.IN_PROGRESS}</MenuItem>
+        <MenuItem onClick={() => handleStatusChange("COMPLETED")}>{orderStatus.COMPLETED}</MenuItem>
+  
+        </Menu>
+      </div>
     );
-  }
-};
+  };
+  
+  const handleDelete = async (orderId: string) => {
+    const res = await OrderApi.deleteOrder(orderId);
+    res && setRefresh(!refresh);
+  };
+  
+  const columns: GridColDef[] = [
+    { field: "id", headerName: "ID", flex: 1 },
+    { field: "orderDate", headerName: "Order Date", flex: 3 },
+    { field: "completionDate", headerName: "Completion Date", flex: 3 },
+    { field: "totalPrice", headerName: "Kwota zamówienia", flex: 2 },
+    {
+      field: "status",
+      headerName: "Status",
+      flex: 2,
+      valueGetter: (params: GridValueGetterParams) =>
+        `${orderStatus[params.row.status as keyof typeof orderStatus]}`,
+    },
+    {
+      field: "user",
+      headerName: "Klient",
+      flex: 4,
+      valueGetter: (params: GridValueGetterParams) =>
+        `${params.row.user.contact.name || ""} ${
+          params.row.user.contact.surname || ""
+        },
+    ${params.row.user.email || ""},
+    ${params.row.user.contact.phoneNumber || ""}`,
+    },
+    {
+      field: "address",
+      headerName: "Adres",
+      flex: 4,
+      valueGetter: (params: GridValueGetterParams) =>
+        `${params.row.address.streetName || ""} ${
+          params.row.address.streetNumber || ""
+        },
+    ${params.row.address.aptNumber || ""},
+    ${params.row.address.cityName || ""}`,
+    },
+    {
+      field: "actions",
+      headerName: "Actions",
+      flex: 3,
+      renderCell: (params) => (
+        <>
+          <Button variant="outlined" color="primary" onClick={()=>handleDelete(params.row.id)}>
+            Delete
+          </Button>
+          <ChangeStatusButton orderId={params.row.id} />
+        </>
+      ),
+    },
+  ];
 
-export default OrderList;
+  
+
+  useEffect(() => {
+    const getProducts = async () => {
+      return await OrderApi.getOrders(pagination);
+    };
+
+    getProducts()
+      .then((x) => {
+        setData(x.data.map((x:any) => ({ ...x, id: x.publicId })));
+      })
+      .catch(console.error);
+  }, [pagination, refresh]);
+
+  return (
+    <div style={{ width: "90%", alignSelf: "center" }}>
+      <DataGrid
+        rows={data}
+        columns={columns}
+        paginationModel={{ page: pagination.page, pageSize: pagination.size }}
+        onPaginationModelChange={(model) => {
+          setPagination({
+            page: model.page,
+            size: model.pageSize,
+            sort: pagination.sort,
+          });
+        }}
+        pageSizeOptions={[5, 10]}
+      />
+    </div>
+  );
+}

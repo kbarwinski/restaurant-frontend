@@ -46,7 +46,6 @@ function AdSection() {
           alignItems: "center",
           margin: 0,
           width: "100%",
-          backgroundColor: "#1a1a1a",
         }}
       >
         <Grid sx={{ display: { xs: "none", md: "block" } }} md={5}>

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -19,5 +19,4 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
 }

@@ -42,7 +42,7 @@ export const ingredientCategories={
     "OTHER":"Inne",
 };
 
-export const measurementUnits={
+export const measureUnits={
     "GRAM":"g",
     "KILOGRAM":"kg",
     "LITER":"l",

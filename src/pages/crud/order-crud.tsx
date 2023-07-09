@@ -5,7 +5,7 @@ import OrderList from "../../components/order/orders-list";
 function OrderCrudPage() {
   return (
     <PageContainer>
-      <Typography variant="h6">Order List</Typography>
+      <Typography variant="h6">Zamówienia</Typography>
       <OrderList/>
     </PageContainer>
   );

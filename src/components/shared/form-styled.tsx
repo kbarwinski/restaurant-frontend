@@ -30,6 +30,7 @@ export const ModalFormContainer = styled(Paper)`
 `;
 
 export const StyledTextField = styled(TextField)`
+  margin: 0.25rem!important;
   width: 80%;
   height:100%;
 `;

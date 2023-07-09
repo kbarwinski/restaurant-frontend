@@ -13,11 +13,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ContactSection from "./components/contact/contactsection/contactsection";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-import OrderCrudPage from "./pages/order/order-crud";
+import OrderCrudPage from "./pages/crud/order-crud";
 import { useAppSelector } from "./store/hooks";
 import axios from "axios";
 import { ThemeOptions, ThemeProvider, CssBaseline } from "@mui/material";
 import OrderStatusPage from "./pages/order/order-status";
+import IngredientCrudPage from "./pages/crud/ingredient-crud";
+import ProductCrudPage from "./pages/crud/product-crud";
+import ReservationCrudPage from "./pages/crud/reservation-crud";
 
 function App() {
   const AuthProvider = () => {
@@ -71,6 +74,9 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/crud/orders" element={<OrderCrudPage />} />
+              <Route path="/crud/ingredients" element={<IngredientCrudPage/>} />
+              <Route path="/crud/products" element={<ProductCrudPage/>} />
+              <Route path="/crud/reservations" element={<ReservationCrudPage />} />
               <Route path="/order/:id" element={<OrderStatusPage />} />
             </Routes>
           </Router>

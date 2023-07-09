@@ -95,6 +95,7 @@ function MenuFilterForm(props: FilterProps) {
         variant="contained"
         size="large"
         sx={{
+          margin: '1rem',
           fontWeight: 900,
           letterSpacing: '.3rem',
           textDecoration: 'none',

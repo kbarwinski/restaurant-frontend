@@ -10,6 +10,7 @@ export const PageContainerFlexible = styled(Box)`
 export const PageContainer = styled(Box)`
   padding-top: 8vh;
   display: flex;
+
   flex-direction: column;
 `;
 

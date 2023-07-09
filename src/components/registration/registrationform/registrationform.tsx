@@ -34,7 +34,7 @@ function RegistrationForm(props:{closeModal:any}) {
 
   return (
     <ModalFormContainer>
-      <H3Title variant="h4">Zarejestruj sie</H3Title>
+      <H3Title variant="h4">Zarejestruj się</H3Title>
       <StyledTextField id="outlined-basic" label="Imię" variant="outlined" inputRef={name} />
       <StyledTextField id="outlined-basic" label="Nazwisko" variant="outlined" inputRef={surname} />
       <StyledTextField id="outlined-basic" label="Email" variant="outlined" inputRef={email} />
@@ -62,6 +62,7 @@ function RegistrationForm(props:{closeModal:any}) {
           fontWeight: 900,
           letterSpacing: ".3rem",
           textDecoration: "none",
+          margin: "1rem",
         }}
         onClick={handleRegistration}
       >

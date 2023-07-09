@@ -30,7 +30,7 @@ function LoginForm(props:{closeModal:any}) {
 
   return (
     <ModalFormContainer>
-      <H3Title variant="h4">Zaloguj sie</H3Title>
+      <H3Title variant="h4">Zaloguj się</H3Title>
       <StyledTextField id="outlined-basic" label="Login/Email" variant="outlined" inputRef={emailRef} />
       <StyledTextField
         id="outlined-basic"

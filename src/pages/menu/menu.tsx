@@ -38,6 +38,7 @@ function MenuPage() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          position: "sticky",
         }}
         >
           <MenuFilterForm

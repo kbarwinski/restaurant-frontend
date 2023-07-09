@@ -16,6 +16,7 @@ import LoginModal from "../login/loginmodal/loginmodal";
 import RegistrationModal from "../registration/registrationmodal/registrationmodal";
 import { selectCount } from "../../store/slices/cartSlice";
 import { Fragment, useState } from "react";
+import AuthSocket from "../authsocket/authsocket";
 
 function NavBar() {
   const itemsCount = useAppSelector((state) => selectCount(state));
@@ -118,8 +119,21 @@ function NavBar() {
                     <CustomizedButton>Zamówienia</CustomizedButton>
                   </CustomizedLink>
                 </MenuItem>
-                <MenuItem onClick={handleMenuClose}>Option 2</MenuItem>
-                <MenuItem onClick={handleMenuClose}>Option 3</MenuItem>
+                <MenuItem onClick={handleMenuClose}>
+                  <CustomizedLink to="/crud/products">
+                    <CustomizedButton>Pozycje menu</CustomizedButton>
+                  </CustomizedLink>
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose}>
+                  <CustomizedLink to="/crud/ingredients">
+                    <CustomizedButton>Składniki</CustomizedButton>
+                  </CustomizedLink>
+                </MenuItem>
+                <MenuItem onClick={handleMenuClose}>
+                  <CustomizedLink to="/crud/reservations">
+                    <CustomizedButton>Rezerwacje</CustomizedButton>
+                  </CustomizedLink>
+                </MenuItem>
               </Menu>
             </Fragment>
           )}
@@ -140,6 +154,8 @@ function NavBar() {
           </CustomizedLink>
         </CustomizedButtonContainer>
       </CustomizedToolbar>
+      {auth.token !== null && (
+        <AuthSocket/>)}
     </CustomizedAppBar>
   );
 }
